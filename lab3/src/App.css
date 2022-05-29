@@ -7,12 +7,6 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,15 +20,6 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 /*==========================On pourra supp ce qu'il y a avant===============================================*/
@@ -58,7 +43,6 @@
 }
 
 .services {
-  /*background-image: url('/images/img-2.jpg');*/
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,7 +51,6 @@
 }
 
 .products {
-  /*background-image: url('/images/img-1.jpg');*/
   background-position: center;
   background-size: fill;
   background-repeat: no-repeat;
@@ -76,7 +59,6 @@
 }
 
 .sign-up {
-  /*background-image: url('/images/img-8.jpg');*/
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
