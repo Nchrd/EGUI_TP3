@@ -6,6 +6,7 @@ import React, {useState, useEffect} from 'react';
 import Login from './Components/Pages/Login';
 import SignUp from './Components/Pages/SignUp';
 import LogOut from './Components/Pages/LogOut';
+import BlogDetails from './Components/BlogDetails';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path='/login' element={<Login/>} />
           <Route exact path='/signup' element={<SignUp/>} />
           <Route exact path='/logout' element={<LogOut />} />
+          <Route exact path='/blogs/:id' element={<BlogDetails />} />
         </Routes>
       </BrowserRouter>
     </>

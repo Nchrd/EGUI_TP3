@@ -3,7 +3,7 @@
     background: #fff!important;
   }
   
-  h1 {
+  h1, h2 {
     text-align: center!important;
   }
 
@@ -19,6 +19,8 @@
   .cards__wrapper {
     position: relative!important;
     margin: 50px 0 45px!important;
+    flex-grow: 1!important;
+    height: 33%!important;
   }
   
   .cards__items {
@@ -30,6 +32,7 @@
     flex: 1!important;
     margin: 0 1rem!important;
     border-radius: 10px!important;
+    object-fit: cover!important;
   }
   
   .cards__item__link {
@@ -42,6 +45,7 @@
     border-radius: 10px!important;
     overflow: hidden!important;
     text-decoration: none!important;
+    object-fit: cover!important;
   }
   
   .cards__item__pic-wrap {
@@ -49,6 +53,7 @@
     width: 100%!important;
     padding-top: 67%!important;
     overflow: hidden!important;
+    object-fit: cover!important;
   }
   
   .fade-img {
@@ -107,11 +112,13 @@
   @media only screen and (min-width: 1024px) {
     .cards__items {
       display: flex!important;
+      flex-wrap: wrap;
     }
   }
   
   @media only screen and (max-width: 1024px) {
     .cards__item {
       margin-bottom: 2rem!important;
+      flex-wrap: wrap;
     }
   }
