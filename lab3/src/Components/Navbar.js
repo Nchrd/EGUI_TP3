@@ -41,6 +41,11 @@ import './Navbar.css';
 								Sign Up
 							</Link>
 						</li>
+						<li className='nav-item'>
+							<Link to='/LogOut' className='nav-links' onClick={closeMobileMenu}>
+								Log Out
+							</Link>
+						</li>
 					</ul>
 					
 				</div>

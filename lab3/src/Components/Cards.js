@@ -1,6 +1,6 @@
 import React from 'react'
 import CardItem from './CardItem'
-import Blogs from '../blogs.json'
+import Blogs from '../db.json'
 import './Cards.css'
 
 function Cards() {
