@@ -28,12 +28,14 @@
                 {
                     "title":"post-title1",
                     "content":"content1",
-                    "date":""
+                    "date":"",
+                    "userId" : 1
                 },
                 {
                     "title":"post-title2",
                     "content":"content2",
-                    "date":""
+                    "date":"",
+                    "userId" : 1
                 }
             ]
         },
@@ -45,12 +47,14 @@
                 {
                     "title":"post-title3",
                     "content":"content3",
-                    "date":""
+                    "date":"",
+                    "userId" : 1
                 },
                 {
                     "title":"post-title4",
                     "content":"content4",
-                    "date":""
+                    "date":"",
+                    "userId" : 1
                 }
             ]
         },
@@ -62,12 +66,33 @@
                 {
                     "title":"post-title5",
                     "content":"content5",
-                    "date":""
+                    "date":"",
+                    "userId" : 1
                 },
                 {
                     "title":"post-title6",
                     "content":"content6",
-                    "date":""
+                    "date":"",
+                    "userId" : 1
+                }
+            ]
+        },
+        {
+            "id":4,
+            "title":"gvrsfefzer",
+            "ownerId":1,
+            "entrylist":[
+                {
+                    "title":"post-title7",
+                    "content":"content7",
+                    "date":"", 
+                    "userId" : 1
+                },
+                {
+                    "title":"post-title8",
+                    "content":"content8",
+                    "date":"",
+                    "userId" : 1
                 }
             ]
         }

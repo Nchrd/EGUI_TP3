@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CardItem from './CardItem'
-import Blogs from '../db.json'
 import './Cards.css'
+import { Link } from 'react-router-dom'
 
 function Cards() {
 
@@ -55,11 +55,14 @@ function Cards() {
             <div className='cards__container'>
               <div className='cards__wrapper'>
                   <ul className='cards__item'>
+                  <Link to={`/blogs/${blog.id}`}>
                       <CardItem 
                       src='/images/img-1.jpg'
                       key={blog.id}
                       title={blog.title}
+                      ownerId={blog.ownerId}
                       />
+                      </Link>
                   </ul>
               </div>
           </div>
