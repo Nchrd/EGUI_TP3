@@ -2,18 +2,19 @@ import React, { useEffect, useState } from 'react'
 import CardItem from './CardItem'
 import './Cards.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
+
 
 function Cards() {
 
-  const url = "http://localhost:5000/blogs";
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
   
   const fetchBlogs = async () => {
     setLoading(true);
     try{
-      const response = await fetch(url);
-      const blogs = await response.json();
+      const response = await axios.get("http://localhost:5000/blogs");
+      const blogs = await response.data;
       setLoading(false);
       setBlogs(blogs);
     } catch(error) {
@@ -23,7 +24,12 @@ function Cards() {
   };
   
   useEffect(() => {
-    fetchBlogs();
+    const getAllBlogs = async () => {
+      const allBlogs = await fetchBlogs();
+      if(allBlogs) setBlogs(allBlogs);
+    };
+
+    getAllBlogs();
   }, [])
 
   if(loading) {
