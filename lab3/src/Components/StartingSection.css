@@ -37,6 +37,11 @@ video {
   
   .starting-btns .btn {
     margin: 6px;
+    color: white!important;
+    font-size: x-large!important;
+    outline-width: 0.1cm!important;
+    outline-color: white!important;
+    outline-style:solid!important;
   }
   
   .fa-play-circle {

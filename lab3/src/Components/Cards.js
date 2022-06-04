@@ -48,7 +48,7 @@ function Cards() {
     <>
     <div className='cards'>
     <h1>Check out the trending blogs !</h1>
-    
+
     {
       blogs.map(blog => {
           return(

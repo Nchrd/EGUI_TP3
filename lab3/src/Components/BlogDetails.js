@@ -53,8 +53,12 @@ function BlogDetails(props) {
         <td>{item.date}</td>
         <td>{item.userId}</td>
         <td>
-          <btn className='btn btn-danger'>Delete</btn>
+          <Link to='/posts/delete'>
+            <btn className='btn btn-danger'>Delete</btn>
+          </Link>
+          <Link to='/posts/edit'>
           <btn className='btn btn-primary'>Edit</btn>
+          </Link>
         </td>
       </tr>
     )
@@ -93,7 +97,7 @@ function BlogDetails(props) {
           
     </div>
     
-    <Link to='/'>
+    <Link to='/posts/create'>
       <btn>New entry</btn>
     </Link>
     
