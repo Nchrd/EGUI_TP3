@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 
 function CardItem(props) {
 
-  const url ="http://localhost:5000/users";
   const [users, setUsers] = useState([]);
   
   const fetchUsers = async () => {
     try{
-      const response = await fetch(url);
-      const users = await response.json();
-      setUsers(users);
+      const response = await axios.get("http://localhost:5000/users");
+      setUsers(response);
     } catch(error) {
       console.log(error);
     }
@@ -31,29 +30,25 @@ function CardItem(props) {
 
   return (
       <>
-          <li className='cards__item'>
-              <figure className='cards__tiem__pic-wrap'>
-                    <img src={props.src} alt='Blog' className='cards__item_img'></img>    
-              </figure>
-              <ul className='cards__item_link'>
-              <div className='cards__item__info'>
-                  {
-                    users.map(user => {
-                      if(user.id === props.ownerId){
-                        return(
-                          <h5 className='cards__item__text'>
-                            {props.title} by {user.username} 
-                          </h5>
-                          )
-                      
-                          
-                      }
-                    })
-                  }
-                </div>  
-              </ul>
-                   
-              
+        <li className='card' style={{width: "18rem"}}>
+          <figure>
+            <img src={props.src} alt='Blog' className='card-img-top'></img>    
+          </figure>
+          <ul className='cards__item__link'>
+            <div className='card-body'>
+                {
+                  users.map(user => {
+                    if(user.id === props.ownerId){
+                      return(
+                        <h5 className='card-title'>
+                          {props.title} by {user.username} 
+                        </h5>
+                      )
+                    }
+                  })
+                }
+              </div>  
+            </ul>   
         </li>
     </>
   );

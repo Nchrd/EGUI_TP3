@@ -4,6 +4,7 @@ import './StartingSection.css';
 import { Link } from 'react-router-dom';
 
 function StartingSection() {
+
   return (
     <>
     <div className='starting-container'>

@@ -4,9 +4,9 @@ function LogOut() {
   return (
     <>
     <div>
-        <h5>
+        <h1>
             You've been logged out
-        </h5>
+        </h1>
     </div>
     </>
   )

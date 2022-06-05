@@ -1,21 +1,20 @@
 import React, {useState, useEffect} from 'react'
 import { Link, useParams } from 'react-router-dom';
+import axios from 'axios'
 
 
 function BlogDetails(props) {
   const { id } = useParams();
 
-  const url = `http://localhost:5000/blogs/${id}`;
   const [loading, setLoading] = useState(false);
   const [blog, setblog] = useState([]);
 
   const fetchblog = async () => {
     setLoading(true);
     try{
-      const response = await fetch(url);
-      const blog = await response.json();
+      const response = await axios.get(`http://localhost:5000/blogs/${id}`);
       setLoading(false);
-      setblog(blog);
+      setblog(response);
     } catch(error) {
       setLoading(false);
       console.log(error);
@@ -39,13 +38,16 @@ function BlogDetails(props) {
     return(
       <main>
         <div className='title'>
-          <h2>No entries created yet !</h2>
+          <h1>No entries created yet !</h1>
+          <Link to='/posts/create'>
+            <btn className='btn btn-primary'>New entry</btn>
+          </Link>
         </div>
       </main>
     )
   }
 
-  let tb_data = blog.entrylist.map((item) => {
+  let tb_data = blog && blog.entrylist.map((item) => {
     return(
       <tr key={item.id}>
         <td>{item.title}</td>

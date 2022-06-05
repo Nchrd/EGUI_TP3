@@ -3,7 +3,7 @@ import CardItem from './CardItem'
 import './Cards.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-
+import Session from 'react-session-api'
 
 function Cards() {
 
@@ -50,32 +50,35 @@ function Cards() {
       </main>
     )
   }
+
+  const blogId = async (e) => {
+    Session.set("blogId", e);
+  }
+
   return (
     <>
     <div className='cards'>
-    <h1>Check out the trending blogs !</h1>
-
+      <h1>Check out the trending blogs !</h1>
     {
       blogs.map(blog => {
           return(
             <div className='cards__container'>
               <div className='cards__wrapper'>
-                  <ul className='cards__item'>
+                <ul className='cards__item' onClick={blogId(blog.id)}>
                   <Link to={`/blogs/${blog.id}`}>
-                      <CardItem 
-                      src='/images/img-1.jpg'
-                      key={blog.id}
-                      title={blog.title}
-                      ownerId={blog.ownerId}
-                      />
-                      </Link>
-                  </ul>
+                    <CardItem 
+                    src='/images/img-1.jpg'
+                    key={blog.id}
+                    title={blog.title}
+                    ownerId={blog.ownerId}
+                    />
+                  </Link>
+                </ul>
               </div>
-          </div>
+            </div>
           )
         })  
     }
-
     </div>
     </>
   )

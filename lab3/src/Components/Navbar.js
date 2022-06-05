@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css';
+import Session from 'react-session-api'
 
 	function Navbar() {
 
@@ -19,6 +20,15 @@ import './Navbar.css';
 	}
 
 	window.addEventListener('resize', showButton);
+
+	const resetSession = () => {
+		Session.clear();
+	}
+
+	const logOutAction = () => {
+		resetSession();
+		closeMobileMenu();
+	}
 
 	return (
 		<>
@@ -42,7 +52,7 @@ import './Navbar.css';
 							</Link>
 						</li>
 						<li className='nav-item'>
-							<Link to='/LogOut' className='nav-links' onClick={closeMobileMenu}>
+							<Link to='/LogOut' className='nav-links' onClick={logOutAction}>
 								Log Out
 							</Link>
 						</li>
