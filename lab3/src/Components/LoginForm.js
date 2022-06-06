@@ -31,12 +31,12 @@ function LoginForm() {
 			return;
 		}
 
-		alert("Bonjour");
-
 		//Enable session
 		
 		Session.set("username", users.username);
-		Session.set("id", user.data[0].id);
+		Session.set("userId", user.data[0].id);
+
+		alert("Hello " + Session.get("username"));
 	}
 
   return (

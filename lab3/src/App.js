@@ -10,7 +10,6 @@ import BlogDetails from './Components/BlogDetails';
 import CreateBlog from './Components/CreateBlog';
 import CreatePost from './Components/CreatePost';
 import EditPost from './Components/EditPost';
-import DeletePost from './Components/DeletePost';
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function App() {
           <Route exact path='/blogs/create' element={<CreateBlog />} />
           <Route exact path='/posts/create' element={<CreatePost />} />
           <Route exact path='/posts/edit' element={<EditPost />} />
-          <Route exact path='/posts/delete' element={<DeletePost />} />
         </Routes>
       </BrowserRouter>
     </>

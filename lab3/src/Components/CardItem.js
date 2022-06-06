@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import Session from 'react-session-api'
+import { useParams } from 'react-router-dom';
 
 function CardItem(props) {
 
@@ -8,7 +10,7 @@ function CardItem(props) {
   const fetchUsers = async () => {
     try{
       const response = await axios.get("http://localhost:5000/users");
-      setUsers(response);
+      setUsers(response.data);
     } catch(error) {
       console.log(error);
     }
@@ -40,7 +42,7 @@ function CardItem(props) {
                   users.map(user => {
                     if(user.id === props.ownerId){
                       return(
-                        <h5 className='card-title'>
+                        <h5 className='card-title' key={user.id}>
                           {props.title} by {user.username} 
                         </h5>
                       )

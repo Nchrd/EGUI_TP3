@@ -41,92 +41,40 @@
     {
       "id": 1,
       "title": "AAAAA",
-      "ownerId": 1,
-      "entrylist": [
-        {
-          "title": "post-title1",
-          "content": "content1",
-          "date": "",
-          "userId": 1,
-          "id":1
-        },
-        {
-          "title": "post-title2",
-          "content": "content2",
-          "date": "",
-          "userId": 1,
-          "id":2
-        }
-      ]
+      "ownerId": 1
     },
     {
       "id": 2,
       "title": "title2",
-      "ownerId": 2,
-      "entrylist": [
-        {
-          "title": "post-title3",
-          "content": "content3",
-          "date": "",
-          "userId": 1,
-          "id":1
-        },
-        {
-          "title": "post-title4",
-          "content": "content4",
-          "date": "",
-          "userId": 1,
-          "id":2
-        }
-      ]
+      "ownerId": 2
     },
     {
       "id": 3,
       "title": "title3",
-      "ownerId": 3,
-      "entrylist": [
-        {
-          "title": "post-title5",
-          "content": "content5",
-          "date": "",
-          "userId": 1,
-          "id":1
-        },
-        {
-          "title": "post-title6",
-          "content": "content6",
-          "date": "",
-          "userId": 1,
-          "id":2
-        }
-      ]
+      "ownerId": 3
     },
     {
       "id": 4,
       "title": "gvrsfefzer",
-      "ownerId": 1,
-      "entrylist": [
-        {
-          "title": "post-title7",
-          "content": "content7",
-          "date": "",
-          "userId": 1,
-          "id":1
-        },
-        {
-          "title": "post-title8",
-          "content": "content8",
-          "date": "",
-          "userId": 1,
-          "id":2
-        }
-      ]
+      "ownerId": 1
+    }
+  ],
+  "entries": [
+    {
+      "title": "aaaaaaaaaaaaaaaaaaaaaa",
+      "content": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "date": "06/06/2022, 19:21:30",
+      "owner": "gg",
+      "blogId": "1",
+      "id": 1
     },
     {
-      "title": "AHHHH",
-      "ownerId": 4,
-      "entryList": [],
-      "id": 5
+      "title": "g",
+      "content": "g",
+      "date": "06/06/2022, 19:22:19",
+      "owner": "gg",
+      "blogId": "1",
+      "id": 2
     }
   ]
 }

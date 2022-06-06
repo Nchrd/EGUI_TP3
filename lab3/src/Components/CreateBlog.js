@@ -15,11 +15,11 @@ function CreateBlog() {
 			return;
 		}
 
-		const entryList = [];
+		console.log(Session.items())
+
 		const newBlog = {
 			title: title,
 			ownerId: Session.get("userId"),
-			entryList: entryList
 		};
 		
 		const response = await axios.post("http://localhost:5000/blogs", newBlog);

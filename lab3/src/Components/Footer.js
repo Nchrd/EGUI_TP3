@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'>
-      <div class='footer-links'>
+      <div className='footer-links'>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>About Us</h2>
             <Link to='/sign-up'>How it works</Link>
             <Link to='/'>Testimonials</Link>
@@ -15,7 +15,7 @@ function Footer() {
             <Link to='/'>Investors</Link>
             <Link to='/'>Terms of Service</Link>
           </div>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>Contact Us</h2>
             <Link to='/'>Contact</Link>
             <Link to='/'>Support</Link>
@@ -24,14 +24,14 @@ function Footer() {
           </div>
         </div>
         <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
             <Link to='/'>Ambassadors</Link>
             <Link to='/'>Agency</Link>
             <Link to='/'>Influencer</Link>
           </div>
-          <div class='footer-link-items'>
+          <div className='footer-link-items'>
             <h2>Socials</h2>
             <Link to='/'>Instagram</Link>
             <Link to='/'>Facebook</Link>
@@ -40,13 +40,13 @@ function Footer() {
           </div>
         </div>
       </div>
-          <div class='footer-logo'>
+          <div className='footer-logo'>
             <Link to='/' className='social-logo'>
               The EGUI Blog
-              <i class='fab fa-typo3' />
+              <i className='fab fa-typo3' />
             </Link>
           </div>
-          <small class='website-rights'>The EGUI Blog © 2022</small>
+          <small className='website-rights'>The EGUI Blog © 2022</small>
     </div>
   );
 }

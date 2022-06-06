@@ -10,25 +10,22 @@ function CreatePost() {
     title: "",
     content: "",
     date: "",
-    ownerId: "",
-    id: ""
+    owner: "",
+    blogId: 0
   })
 
   const addPost = async (e) => {
-    newEntry.date = Date().toLocaleString();
-    newEntry.ownerId = Session.get("userId");
+    newEntry.date = new Date().toLocaleString();
+    newEntry.owner = Session.get("username");
+    newEntry.blogId = Session.get("blogId");
 
     if(newEntry.content === "" || newEntry.title === ""){
       alert("Please fill all the fields");
       return;
     }
 
-    const blog = await axios.get(`http://localhost:5000/blogs/${Session.get("blogId")}`);
-    newEntry.id = blog.data[0].entrylist.lenght + 1;
-    blog.data[0].entrylist.push(newEntry);
-    const newEntryList = blog.data[0].entrylist;
-
-    const response = await axios.patch(`http://localhost:5000/blogs/${Session.get("blogId")}`, {entrylist : newEntryList});
+    const response = await axios.post(`http://localhost:5000/entries`, newEntry);
+    
     if(response){
       alert("Entry added");
     }else{
@@ -40,8 +37,8 @@ function CreatePost() {
       title: "",
       content: "",
       date: "",
-      ownerId: "",
-      id: ""
+      owner: "",
+      blogId: 0
     })
   }
 
