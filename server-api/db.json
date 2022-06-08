@@ -57,6 +57,16 @@
       "id": 4,
       "title": "gvrsfefzer",
       "ownerId": 1
+    },
+    {
+      "title": "hhjjkk",
+      "ownerId": 4,
+      "id": 5
+    },
+    {
+      "title": "azaz",
+      "ownerId": 4,
+      "id": 6
     }
   ],
   "entries": [
@@ -69,9 +79,9 @@
       "id": 1
     },
     {
-      "title": "g",
-      "content": "g",
-      "date": "06/06/2022, 19:22:19",
+      "title": "t",
+      "content": "t",
+      "date": "06/06/2022, 23:56:44",
       "owner": "gg",
       "blogId": "1",
       "id": 2

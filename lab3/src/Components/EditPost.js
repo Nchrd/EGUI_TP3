@@ -1,11 +1,9 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Session from 'react-session-api'
 
 function EditPost() {
-
-  const newUrl = `/blogs/${Session.get("blogId")}`;
 
   const [post, setPost] = useState({
     title: "",
@@ -15,16 +13,26 @@ function EditPost() {
     blogId: ""
   })
 
+  const fetchPost = async () => {
+    const response = await axios.get(`http://localhost:5000/entries?id=${Session.get("postId")}`);
+    setPost(response.data[0]);
+  }
+
+  useEffect(() => {
+    fetchPost();
+  }, [])
+
   const editPost = async () => {
-    const postData = axios.get(`http://localhost:5000/entries/${Session.get("postId")}`);
-    setPost(postData);
+    post.date = new Date().toLocaleString();
+    post.blogId = Session.get("blogId");
+    post.owner = Session.get("username");
     const response = await axios.put(`http://localhost:5000/entries/${Session.get("postId")}`, post);
-    if(response){
-      alert("Entry modified");
-    }else{
+    if(!response){
       alert("Oops... Something went wrong !");
     }
   }
+
+  const newUrl = `/blogs/${Session.get("blogId")}`;
 
   return (
     <>
@@ -48,9 +56,9 @@ function EditPost() {
               className='form-control'
               value={post.content}
               onChange={(e) => setPost({...post, content: e.target.value})}/>
-            <Link to={newUrl} className='btn btn-primary' onClick={editPost()}>
-              Edit the post
-            </Link>
+              <Link to='/' className='btn btn-primary' onClick={editPost()}>
+                  Edit the entry
+              </Link>
           </div>
         </form>
       </div>

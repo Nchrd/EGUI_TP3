@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import './StartingSection.css';
 import { Link } from 'react-router-dom';
+import Session from 'react-session-api'
 
 function StartingSection() {
 
