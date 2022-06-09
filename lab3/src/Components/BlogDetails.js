@@ -72,7 +72,6 @@ function BlogDetails() {
   }
 
   const deleteEntry = async (e) => {
-    alert(e);
     const response = await axios.delete(`http://localhost:5000/entries/${e}`);
     if(response){
       alert("Entry deleted");

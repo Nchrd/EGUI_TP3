@@ -35,6 +35,12 @@
       "email": "jj",
       "password": "gg",
       "id": 6
+    },
+    {
+      "username": "aj",
+      "email": "aj",
+      "password": "aj",
+      "id": 7
     }
   ],
   "blogs": [
@@ -67,6 +73,11 @@
       "title": "azaz",
       "ownerId": 4,
       "id": 6
+    },
+    {
+      "title": "Presentation",
+      "ownerId": 4,
+      "id": 7
     }
   ],
   "entries": [
@@ -85,6 +96,22 @@
       "owner": "gg",
       "blogId": "1",
       "id": 2
+    },
+    {
+      "title": "",
+      "content": "",
+      "date": "09/06/2022, 13:16:25",
+      "owner": "gg",
+      "blogId": "7",
+      "id": 3
+    },
+    {
+      "title": "kkk",
+      "content": "kkkj",
+      "date": "09/06/2022, 13:18:48",
+      "owner": "gg",
+      "blogId": "7",
+      "id": 4
     }
   ]
 }

@@ -26,6 +26,7 @@ function EditPost() {
     post.date = new Date().toLocaleString();
     post.blogId = Session.get("blogId");
     post.owner = Session.get("username");
+
     const response = await axios.put(`http://localhost:5000/entries/${Session.get("postId")}`, post);
     if(!response){
       alert("Oops... Something went wrong !");

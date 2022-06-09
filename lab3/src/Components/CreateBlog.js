@@ -48,7 +48,7 @@ function CreateBlog() {
 					value={title}
 					onChange={(e) => setTitle(e.target.value)}/>
 				<Link to='/' className='btn btn-primary' onClick={addBlog}>
-					Login
+					Create Blog
 				</Link>
 			</div>
 		</form>

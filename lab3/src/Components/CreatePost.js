@@ -15,6 +15,14 @@ function CreatePost() {
   })
 
   const addPost = async (e) => {
+
+    const user = await axios.get(`http://localhost:5000/users?username=${Session.get("username")}`);
+
+		if(user.data[0] === undefined){
+			alert("You need to login or sign up before creating an entry");
+			return;
+		}
+
     newEntry.date = new Date().toLocaleString();
     newEntry.owner = Session.get("username");
     newEntry.blogId = Session.get("blogId");
